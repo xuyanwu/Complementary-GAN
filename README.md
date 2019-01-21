@@ -1,19 +1,13 @@
-ACGAN
+Complementary GAN
 ===
-An PyTorch implementation of [Conditional Image Synthesis with Auxiliary Classifier GANs](https://arxiv.org/pdf/1610.09585.pdf)
+An PyTorch implementation 
 
 ## result
 
 ### Mnist
-sample from  0~30 epoch
+sample from  0~20 epoch
 
-![](images/test.gif)
 
 ### Cifar10
-sample from  0~50 epoch
+sample from  0~80 epoch
 
-![](images/cifar10.gif)
-
-## acknowledgement
-
-[kimhc6028/acgan-pytorch](https://github.com/kimhc6028/acgan-pytorch.git)
