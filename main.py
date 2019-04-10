@@ -29,17 +29,17 @@ torch.backends.cudnn.enbaled = True
 
 def args():
     FLAG = argparse.ArgumentParser(description='ACGAN Implement With Pytorch.')
-    FLAG.add_argument('--dataset', default='CIFAR10', help='CIFAR10 | MNIST')
+    FLAG.add_argument('--dataset', default='MNIST', help='CIFAR10 | MNIST')
     FLAG.add_argument('--savingroot', default='../result', help='path to saving.')
     FLAG.add_argument('--dataroot', default='data', help='path to dataset.')
     FLAG.add_argument('--manual_seed', default=42, help='manual seed.')
     FLAG.add_argument('--p1', default=1.0, type=float, help='p1')
-    FLAG.add_argument('--p2', default=1.0, type=float, help='p2')
+    FLAG.add_argument('--p2', default=0.05, type=float, help='p2')
     FLAG.add_argument('--image_size', default=32, help='image size.')
     FLAG.add_argument('--batch_size', default=128, help='batch size.')
     FLAG.add_argument('--num_workers', default=2, help='num workers.')
-    FLAG.add_argument('--num_epoches', default=60, type=int, help='num workers.')
-    FLAG.add_argument('--nc', default=3, type=int, help='channel of input image.')
+    FLAG.add_argument('--num_epoches', default=40, type=int, help='num workers.')
+    FLAG.add_argument('--nc', default=1, type=int, help='channel of input image.')
     FLAG.add_argument('--nz', default=64, help='length of noize.')
     FLAG.add_argument('--ndf', default=64, help='number of filters.')
     FLAG.add_argument('--ngf', default=64, help='number of filters.')
@@ -243,6 +243,6 @@ if __name__ == '__main__':
     configure(os.path.join(opt.savingroot, opt.dataset, str(opt.p1 * 100) + '%complementary/' +'/logs'),
               flush_secs=5)
 
-    # train_gan(opt)
+    train_gan(opt)
     train_f_data(opt)
 

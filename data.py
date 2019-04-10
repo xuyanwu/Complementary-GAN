@@ -88,7 +88,7 @@ class CIFAR10_Complementary():
 
 
         if self.train:
-            return img_g, img_c, label_c
+            return img_c, label_c
         else:
             return img, target
 

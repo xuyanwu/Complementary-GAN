@@ -17,7 +17,7 @@ def train_c(epoch,netd_c,optd_c,loader,step,opt):
 
 
     netd_c.train()
-    for _, (image_g,image_c, label) in enumerate(loader):
+    for _, (image_c, label) in enumerate(loader):
 
         # plt.imshow(np.transpose((image[0].cpu().numpy()+1)/2,[1,2,0]))
         # plt.show()
